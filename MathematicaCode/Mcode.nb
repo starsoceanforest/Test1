@@ -1,0 +1,405 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13801,        395]
+NotebookOptionsPosition[     12530,        363]
+NotebookOutlinePosition[     12923,        379]
+CellTagsIndexPosition[     12880,        376]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Comparison the coefficient of Generalized Trigonometric curves \
+\>", "Title",
+ CellChangeTimes->{{3.799464779891411*^9, 3.799464855695509*^9}, 
+   3.799464942390563*^9},ExpressionUUID->"0d6a69bf-c563-495f-bc39-\
+d6e218996cfd"],
+
+Cell["Pascal", "Subtitle",
+ CellChangeTimes->{{3.7994650649066772`*^9, 3.7994650678736067`*^9}},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"8752f264-a684-4e37-a6b9-4dd11374d39a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ColumnForm", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"n", ",", "k"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", "n"}], "}"}]}], "]"}], ",", "Center"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.799464991229273*^9, 3.799464993977908*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"38535e2a-879f-4f0c-8802-602c42bf586f"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{"{", "1", "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "1"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "3", ",", "1"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4", ",", "6", ",", "4", ",", "1"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"1", ",", "5", ",", "10", ",", "10", ",", "5", ",", "1"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "15", ",", "20", ",", "15", ",", "6", ",", "1"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "21", ",", "35", ",", "35", ",", "21", ",", "7", 
+       ",", "1"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "8", ",", "28", ",", "56", ",", "70", ",", "56", ",", "28", 
+       ",", "8", ",", "1"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "9", ",", "36", ",", "84", ",", "126", ",", "126", ",", "84", 
+       ",", "36", ",", "9", ",", "1"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "10", ",", "45", ",", "120", ",", "210", ",", "252", ",", 
+       "210", ",", "120", ",", "45", ",", "10", ",", "1"}], "}"}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}}],
+  ColumnForm[{{1}, {1, 1}, {1, 2, 1}, {1, 3, 3, 1}, {1, 4, 6, 4, 1}, {1, 5, 
+    10, 10, 5, 1}, {1, 6, 15, 20, 15, 6, 1}, {1, 7, 21, 35, 35, 21, 7, 1}, {1,
+     8, 28, 56, 70, 56, 28, 8, 1}, {1, 9, 36, 84, 126, 126, 84, 36, 9, 1}, {1,
+     10, 45, 120, 210, 252, 210, 120, 45, 10, 1}}, Center],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.799465154738522*^9, 3.799465161957203*^9}},
+ CellLabel->"Out[32]=",ExpressionUUID->"01c59db2-792d-467a-bd6d-0abd06a6f781"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"n", "=", "5"}], "}"}], ",", 
+    RowBox[{"MatrixExp", "[", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"i", "\[Equal]", 
+          RowBox[{"(", 
+           RowBox[{"j", "+", "1"}], ")"}]}], ",", 
+         RowBox[{"j", "+", "1"}], ",", "0"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "0", ",", "n"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "0", ",", "n"}], "}"}]}], "]"}], "]"}]}], "]"}], "//",
+   "TraditionalForm"}]], "Input",
+ CellLabel->"In[33]:=",ExpressionUUID->"a970943f-fccd-42fb-92c7-157d56306712"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0", "0", "0", "0"},
+     {"1", "1", "0", "0", "0", "0"},
+     {"1", "2", "1", "0", "0", "0"},
+     {"1", "3", "3", "1", "0", "0"},
+     {"1", "4", "6", "4", "1", "0"},
+     {"1", "5", "10", "10", "5", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.7994648972533827`*^9, {3.7994651572903433`*^9, 3.799465163931978*^9}},
+ CellLabel->
+  "Out[33]//TraditionalForm=",ExpressionUUID->"e646e99a-57cd-4b21-88f1-\
+de5f168d14c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Coefficient of Generalized Trigonometric curves", "Subtitle",
+ CellChangeTimes->{{3.7994650928067293`*^9, 3.79946509479346*^9}, {
+  3.799465140402603*^9, 3.7994651497714*^9}},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"c3cecbca-fd31-423b-934e-2fa834e25a40"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{
+  "a1", ",", "a2", ",", "a3", ",", "a4", ",", "a5", ",", "a6", ",", "a7", ",",
+    "a8", ",", "a9", ",", "a10"}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"a1", "=", 
+   RowBox[{"{", "1", "}"}]}], ";", 
+  RowBox[{"a2", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ";", 
+  RowBox[{"a3", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "4", ",", "2", ",", "1"}], "}"}]}], ";", 
+  RowBox[{"a4", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "3", ",", "9", ",", "8", ",", "9", ",", "3", ",", "1"}],
+     "}"}]}], ";", 
+  RowBox[{"a5", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "4", ",", "16", ",", "20", ",", "34", ",", "20", ",", "16", ",",
+      "4", ",", "1"}], "}"}]}], ";", 
+  RowBox[{"a6", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "5", ",", "25", ",", "40", ",", "90", ",", "74", ",", "90", ",",
+      "40", ",", "25", ",", "5", ",", "1"}], "}"}]}], ";", 
+  RowBox[{"a7", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "6", ",", "36", ",", "70", ",", "195", ",", "204", ",", "328", 
+     ",", "204", ",", "195", ",", "70", ",", "36", ",", "6", ",", "1"}], 
+    "}"}]}], ";", 
+  RowBox[{"a8", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "7", ",", "49", ",", "112", ",", "371", ",", "469", ",", "931", 
+     ",", "736", ",", "931", ",", "469", ",", "371", ",", "112", ",", "49", 
+     ",", "7", ",", "1"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"a9", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "8", ",", "64", ",", "168", ",", "644", ",", "952", ",", "2240",
+      ",", "2136", ",", "3334", ",", "2136", ",", "2240", ",", "952", ",", 
+     "644", ",", "168", ",", "64", ",", "8", ",", "1"}], "}"}]}], ";", 
+  RowBox[{"a10", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "9", ",", "81", ",", "240", ",", "1044", ",", "1764", ",", 
+     "4788", ",", "5328", ",", "9846", ",", "7606", ",", "9846", ",", "5328", 
+     ",", "4788", ",", "1764", ",", "1044", ",", "240", ",", "81", ",", "9", 
+     ",", "1"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"coeffGM", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "a1", ",", "a2", ",", "a3", ",", "a4", ",", "a5", ",", "a6", ",", "a7", 
+     ",", "a8", ",", "a9", ",", "a10"}], "}"}]}], ";"}], "\n", 
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"ColumnForm", "[", 
+    RowBox[{
+     RowBox[{"bicoeff", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Binomial", "[", 
+         RowBox[{"n", ",", "k"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", "0", ",", "9"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", "0", ",", "n"}], "}"}]}], "]"}]}], ",", "Center"}],
+     "]"}], ",", 
+   RowBox[{"ColumnForm", "[", 
+    RowBox[{"coeffGM", ",", "Center"}], "]"}]}], "}"}]}], "Input",
+ CellChangeTimes->{{3.799465082831541*^9, 3.799465084311899*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"fa81da88-3c9f-49b2-809b-163d3cbe6bb8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[GridBox[{
+      {
+       RowBox[{"{", "1", "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"1", ",", "3", ",", "3", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"1", ",", "4", ",", "6", ",", "4", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"1", ",", "5", ",", "10", ",", "10", ",", "5", ",", "1"}], 
+        "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "6", ",", "15", ",", "20", ",", "15", ",", "6", ",", "1"}], 
+        "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "7", ",", "21", ",", "35", ",", "35", ",", "21", ",", "7", 
+         ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "8", ",", "28", ",", "56", ",", "70", ",", "56", ",", "28", 
+         ",", "8", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "9", ",", "36", ",", "84", ",", "126", ",", "126", ",", 
+         "84", ",", "36", ",", "9", ",", "1"}], "}"}]}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}}],
+    ColumnForm[{{1}, {1, 1}, {1, 2, 1}, {1, 3, 3, 1}, {1, 4, 6, 4, 1}, {1, 5, 
+      10, 10, 5, 1}, {1, 6, 15, 20, 15, 6, 1}, {1, 7, 21, 35, 35, 21, 7, 1}, {
+      1, 8, 28, 56, 70, 56, 28, 8, 1}, {1, 9, 36, 84, 126, 126, 84, 36, 9, 
+      1}}, Center],
+    Editable->False], ",", 
+   InterpretationBox[GridBox[{
+      {
+       RowBox[{"{", "1", "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "4", ",", "2", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "3", ",", "9", ",", "8", ",", "9", ",", "3", ",", "1"}], 
+        "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "4", ",", "16", ",", "20", ",", "34", ",", "20", ",", "16", 
+         ",", "4", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "5", ",", "25", ",", "40", ",", "90", ",", "74", ",", "90", 
+         ",", "40", ",", "25", ",", "5", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "6", ",", "36", ",", "70", ",", "195", ",", "204", ",", 
+         "328", ",", "204", ",", "195", ",", "70", ",", "36", ",", "6", ",", 
+         "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "7", ",", "49", ",", "112", ",", "371", ",", "469", ",", 
+         "931", ",", "736", ",", "931", ",", "469", ",", "371", ",", "112", 
+         ",", "49", ",", "7", ",", "1"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "8", ",", "64", ",", "168", ",", "644", ",", "952", ",", 
+         "2240", ",", "2136", ",", "3334", ",", "2136", ",", "2240", ",", 
+         "952", ",", "644", ",", "168", ",", "64", ",", "8", ",", "1"}], 
+        "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "9", ",", "81", ",", "240", ",", "1044", ",", "1764", ",", 
+         "4788", ",", "5328", ",", "9846", ",", "7606", ",", "9846", ",", 
+         "5328", ",", "4788", ",", "1764", ",", "1044", ",", "240", ",", "81",
+          ",", "9", ",", "1"}], "}"}]}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}}],
+    ColumnForm[{{1}, {1, 1, 1}, {1, 2, 4, 2, 1}, {1, 3, 9, 8, 9, 3, 1}, {1, 4,
+       16, 20, 34, 20, 16, 4, 1}, {1, 5, 25, 40, 90, 74, 90, 40, 25, 5, 1}, {
+      1, 6, 36, 70, 195, 204, 328, 204, 195, 70, 36, 6, 1}, {1, 7, 49, 112, 
+      371, 469, 931, 736, 931, 469, 371, 112, 49, 7, 1}, {1, 8, 64, 168, 644, 
+      952, 2240, 2136, 3334, 2136, 2240, 952, 644, 168, 64, 8, 1}, {1, 9, 81, 
+      240, 1044, 1764, 4788, 5328, 9846, 7606, 9846, 5328, 4788, 1764, 1044, 
+      240, 81, 9, 1}}, Center],
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.799464963571369*^9, 3.79946516615228*^9},
+ CellLabel->"Out[38]=",ExpressionUUID->"6374d50b-29ac-476b-a858-ec1b8a3b5e26"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1290, 881},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"fdf24f28-9532-4c15-b44e-bed36c680328"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 237, 5, 98, "Title",ExpressionUUID->"0d6a69bf-c563-495f-bc39-d6e218996cfd"],
+Cell[820, 29, 192, 3, 69, "Subtitle",ExpressionUUID->"8752f264-a684-4e37-a6b9-4dd11374d39a"],
+Cell[CellGroupData[{
+Cell[1037, 36, 499, 13, 30, "Input",ExpressionUUID->"38535e2a-879f-4f0c-8802-602c42bf586f"],
+Cell[1539, 51, 1876, 54, 215, "Output",ExpressionUUID->"01c59db2-792d-467a-bd6d-0abd06a6f781"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3452, 110, 699, 20, 30, "Input",ExpressionUUID->"a970943f-fccd-42fb-92c7-157d56306712"],
+Cell[4154, 132, 834, 22, 127, "Output",ExpressionUUID->"e646e99a-57cd-4b21-88f1-de5f168d14c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5025, 159, 277, 4, 69, "Subtitle",ExpressionUUID->"c3cecbca-fd31-423b-934e-2fa834e25a40"],
+Cell[CellGroupData[{
+Cell[5327, 167, 2918, 77, 283, "Input",ExpressionUUID->"fa81da88-3c9f-49b2-809b-163d3cbe6bb8"],
+Cell[8248, 246, 4242, 112, 222, "Output",ExpressionUUID->"6374d50b-29ac-476b-a858-ec1b8a3b5e26"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
